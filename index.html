@@ -16,46 +16,53 @@
       background-color: #BC906E;
       margin: 10px auto;
     }
-    .transition-colors{
+    .transition-colors {
       font-weight: bold;
     }
-    .transition-colors:hover{
+    .transition-colors:hover {
       background-color: #d6c0af;
       padding: 10px;
     }
-    footer{
+    footer {
       background-color: #BC906E;
     }
-    h1{
-      color: #b48460;;
+    h1 {
+      color: #b48460;
     }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-  
+  <!-- Responsive Header -->
   <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
       <h1 class="text-xl font-bold">🇮🇳 India Gate</h1>
-      <nav class="space-x-4">
-        <a href="#overview" class="transition-colors  hover:text-[#BC906E]">Overview</a>
-        <a href="#architecture" class="transition-colors  hover:text-[#BC906E]">Architecture</a>
-        <a href="#amar-jyoti" class="transition-colors  hover:text-[#BC906E]">Amar Jyoti</a>
-        <a href="#importance" class="transition-colors  hover:text-[#BC906E]">Symbolism</a>
+      <button id="menu-toggle" class="md:hidden text-[#b48460] text-2xl focus:outline-none">☰</button>
+      <nav class="hidden md:flex space-x-4 font-semibold" id="desktop-menu">
+        <a href="#overview" class="transition-colors hover:text-[#BC906E]">Overview</a>
+        <a href="#architecture" class="transition-colors hover:text-[#BC906E]">Architecture</a>
+        <a href="#amar-jyoti" class="transition-colors hover:text-[#BC906E]">Amar Jyoti</a>
+        <a href="#importance" class="transition-colors hover:text-[#BC906E]">Symbolism</a>
       </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white shadow">
+      <a href="#overview" class="block py-2 transition-colors hover:text-[#BC906E]">Overview</a>
+      <a href="#architecture" class="block py-2 transition-colors hover:text-[#BC906E]">Architecture</a>
+      <a href="#amar-jyoti" class="block py-2 transition-colors hover:text-[#BC906E]">Amar Jyoti</a>
+      <a href="#importance" class="block py-2 transition-colors hover:text-[#BC906E]">Symbolism</a>
     </div>
   </header>
 
-<!-- 
-  https://wallpaperaccess.com/full/4455710.jpg
-     https://images.pexels.com/photos/20690413/pexels-photo-20690413.jpeg -->
+  <!-- Hero Section -->
   <section class="relative bg-cover bg-center h-96 text-white" style="background-image: url('https://i.pinimg.com/736x/16/dc/83/16dc83f7ab7279d1683f2173ab8f4642.jpg');">
     <div class="bg-gray-100 bg-opacity-50 h-full flex items-center justify-center">
-      <h2 class="text-4xl font-bold">Architectural Marvel & War Memorial</h2>
+      <h2 class="text-4xl font-bold text-center">Architectural Marvel & War Memorial</h2>
     </div>
   </section>
 
-
+  <!-- Overview -->
   <section id="overview" class="py-12 px-6 max-w-5xl mx-auto" data-aos="fade-up">
     <h2 class="text-2xl font-bold text-center section-title">🏛️ Overview and Purpose</h2>
     <div class="mt-6 grid sm:grid-cols-2 gap-6">
@@ -72,41 +79,30 @@
     </div>
   </section>
 
-
-<section id="architecture" class="bg-white py-12 px-6 max-w-5xl mx-auto" data-aos="fade-up">
-  <h2 class="text-2xl font-bold text-center section-title">🧱 Structural and Design Details</h2>
-  <div class="mt-10 grid md:grid-cols-2 gap-8 items-center">
-    
-    <!-- Left: Image
-     https://images.pexels.com/photos/20690413/pexels-photo-20690413.jpeg
-     https://i.pinimg.com/736x/af/eb/52/afeb52c07e58f96cba1d02763c39e4c9.jpg
-    -->
-    <div class="space-y-4">
-      <img src="https://i.pinimg.com/736x/c0/74/58/c07458c8c133560e8c4b83175e3784c5.jpg" alt="India Gate Close-Up" class="w-full h-auto rounded-xl shadow-lg border-4 border-orange-300">
-      <p class="text-sm text-center italic text-gray-600">A wide-angle view capturing the grandeur of India Gate against the Delhi skyline</p>
+  <!-- Architecture Section -->
+  <section id="architecture" class="bg-white py-12 px-6 max-w-5xl mx-auto" data-aos="fade-up">
+    <h2 class="text-2xl font-bold text-center section-title">🧱 Structural and Design Details</h2>
+    <div class="mt-10 grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-4">
+        <img src="https://i.pinimg.com/736x/c0/74/58/c07458c8c133560e8c4b83175e3784c5.jpg" alt="India Gate Close-Up" class="w-full h-auto rounded-xl shadow-lg border-4 border-orange-300">
+        <p class="text-sm text-center italic text-gray-600">A wide-angle view capturing the grandeur of India Gate against the Delhi skyline</p>
+      </div>
+      <div class="space-y-4">
+        <p><strong>Material:</strong> Red and yellow sandstone sourced from Bharatpur, Rajasthan</p>
+        <p><strong>Architectural Style:</strong> European triumphal arch, drawing inspiration from the Arc de Triomphe in Paris</p>
+        <p><strong>Engravings:</strong> Over 13,000 names of Indian and British soldiers are inscribed on the surface</p>
+        <blockquote class="italic text-gray-700 border-l-4 border-orange-500 pl-4">
+          “To the dead of the Indian Armies who fell and are honoured in France and Flanders, Mesopotamia and Persia, East Africa, Gallipoli and elsewhere...”
+        </blockquote>
+      </div>
     </div>
-
-    <!-- Right: Content -->
-    <div class="space-y-4">
-      <p><strong>Material:</strong> Red and yellow sandstone sourced from Bharatpur, Rajasthan</p>
-      <p><strong>Architectural Style:</strong> European triumphal arch, drawing inspiration from the Arc de Triomphe in Paris</p>
-      <p><strong>Engravings:</strong> Over 13,000 names of Indian and British soldiers are inscribed on the surface</p>
-      <blockquote class="italic text-gray-700 border-l-4 border-orange-500 pl-4">
-        “To the dead of the Indian Armies who fell and are honoured in France and Flanders, Mesopotamia and Persia, East Africa, Gallipoli and elsewhere...”
-      </blockquote>
+    <div class="mt-10 flex justify-center">
+      <img src="https://images.pexels.com/photos/20690413/pexels-photo-20690413.jpeg" alt="Wide View of India Gate" class="w-full md:w-3/4 rounded-xl shadow-lg">
     </div>
+    <p class="text-sm text-center italic text-gray-600 mt-2">Close-up view of India Gate's majestic stonework</p>
+  </section>
 
-  </div>
-
-  <!-- Optional: Add a second image below for creative appeal -->
-  <div class="mt-10 flex justify-center">
-    <img src="https://images.pexels.com/photos/20690413/pexels-photo-20690413.jpeg" alt="Wide View of India Gate" class="w-full md:w-3/4 rounded-xl shadow-lg">
-  </div>
-  <p class="text-sm text-center italic text-gray-600 mt-2">Close-up view of India Gate's majestic stonework</p>
-</section>
-
-
-  
+  <!-- Amar Jyoti Section -->
   <section id="amar-jyoti" class="bg-gray-100 py-12 px-6 max-w-5xl mx-auto" data-aos="fade-up">
     <h2 class="text-2xl font-bold text-center section-title">Amar Jawan Jyoti (1972–2022)</h2>
     <ul class="list-disc list-inside mt-6 space-y-2">
@@ -117,7 +113,7 @@
     </ul>
   </section>
 
-  
+  <!-- Importance Section -->
   <section id="importance" class="py-12 px-6 max-w-5xl mx-auto" data-aos="fade-up">
     <h2 class="text-2xl font-bold text-center section-title">🇮🇳 Symbolic Importance Today</h2>
     <p class="mt-4">India Gate is more than a war memorial—it's a cultural, civic, and emotional symbol:</p>
@@ -130,20 +126,21 @@
     </ul>
   </section>
 
-  
-  <footer class="transition-colors  bg-[#BC906E] text-white text-center py-6 mt-10">
+  <!-- Footer -->
+  <footer class="transition-colors bg-[#BC906E] text-white text-center py-6 mt-10">
     <p>Proudly celebrating India's heritage | BAPS Anand</p>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>AOS.init();</script>
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
